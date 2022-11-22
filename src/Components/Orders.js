@@ -5,11 +5,12 @@ import '../App.css';
 function Orders({orders}) {
   return (
     <>
+     <div className='container'>
     
     {
       orders.map((order) => {
       return (
-        <div className='container'>
+       
         <article key = {order.id} className='order'>
           <image src = {order.image} alt = {order.name} className="image"/>
           <h1 >{order.name}</h1>
@@ -17,12 +18,13 @@ function Orders({orders}) {
 
         </article>
 
-        </div>
+     
    
       )
       })
-    }
     
+    }
+      </div>
     </>
   )
 }

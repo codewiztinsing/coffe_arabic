@@ -15,9 +15,15 @@ function HomeScreen() {
         <Orders orders={_data} />
 
         <button onClick={() => {
-          setData([])
+          _data.length > 0 ?
+          setData([]):setData(data)
         }}
-        className="btn-clear">clear</button>
+        className="btn-clear">
+          {
+            _data.length >0 ?" Finish": "show"
+          }
+          
+          </button>
     </div>
   )
 }
