@@ -1,22 +1,27 @@
 import React from 'react'
+import '../App.css';
+
 
 function Orders({orders}) {
   return (
     <>
     
     {
-        orders.map((order) => {
-            const {id,name,image,price} = order;
-            return (
-                <section key = {id} className='order'>
-                    <img src={image} alt = {name} />
-                    <h1>{name}</h1>
-                    <h2>{price}</h2>
-                </section>
-            )
-        })
+      orders.map((order) => {
+      return (
+        <div className='container'>
+        <article key = {order.id} className='order'>
+          <image src = {order.image} alt = {order.name} className="image"/>
+          <h1 >{order.name}</h1>
+          <p>{order.price}</p>
+
+        </article>
+
+        </div>
+   
+      )
+      })
     }
-    
     
     </>
   )
